@@ -17,6 +17,7 @@
             if (isset($_GET['views'])) {
                 // separa la ruta usando el delimitador /
                 $ruta=explode("/",$_GET['views']);
+                // regresa el contenido si existe esa vista
                 $respuesta=vistasModelo::obtener_vistas_modelo($ruta[0]);
             }else{
                 $respuesta= "login";
