@@ -7,6 +7,17 @@
     <?php  include "./vistas/inc/Links.php"; ?>
 </head>
 <body>
+	<?php
+		$peticionAjax= false;
+		require_once "./controladores/vistasControlador.php";
+		$IV= new vistasControlador();
+		
+		$vista= $IV->obtener_vistas_controlador();
+
+		if ($vista=="login" || $vista=="404"	){
+			require_once "./vistas/contenidos/".$vista."-view.php";
+		}else {
+	?>
 	
 	<!-- Main container -->
 	<main class="full-box main-container">
@@ -16,7 +27,10 @@
 		<!-- Page content -->
         <!-- Barra de la parte de arriba -->
 		<section class="full-box page-content">
-            <?php include "./vistas/inc/NavBarSup.php" ; ?>
+			
+            <?php include "./vistas/inc/NavBarSup.php"; 
+				include $vista;
+			?>
 
 			<!-- DESACTIVAR PORQUE SE HARA DINAMICO CON VISTAS 
              Page header 
@@ -91,11 +105,13 @@
 
 		</section>
 	</main>
-	
+		
 	
 	<!--=============================================
 	=            Include JavaScript files           =
 	==============================================-->
-    <?php include "./vistas/inc/Scripts.php"; ?>
+		<?php 
+		}
+			include "./vistas/inc/Scripts.php"; ?>
 </body>
 </html>

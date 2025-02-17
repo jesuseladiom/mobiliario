@@ -1,5 +1,5 @@
 <?php
-    const SERVER_URL="http://localhost/mobiliario/";
+    const SERVER_URL="http://localhost:81/mobiliario/";
     const COMPANY="SISTEMA DE MOBILIARIO";
     const MONEDA="$";
 
