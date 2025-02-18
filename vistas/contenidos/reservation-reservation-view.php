@@ -1,41 +1,47 @@
-<!-- Page header -->
 <div class="full-box page-header">
     <h3 class="text-left">
-        <i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES
+        <i class="far fa-calendar-alt fa-fw"></i> &nbsp; RESERVACIONES
     </h3>
     <p class="text-justify">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum rerum animi natus beatae ex. Culpa
-        blanditiis tempore amet alias placeat, obcaecati quaerat ullam, sunt est, odio aut veniam ratione.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia fugiat est ducimus inventore, repellendus
+        deserunt cum aliquam dignissimos, consequuntur molestiae perferendis quae, impedit doloribus harum
+        necessitatibus magnam voluptatem voluptatum alias!
     </p>
 </div>
 
 <div class="container-fluid">
     <ul class="full-box list-unstyled page-nav-tabs">
         <li>
-            <a href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR CLIENTE</a>
+            <a href="reservation-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO PRÉSTAMO</a>
         </li>
         <li>
-            <a class="active" href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE
-                CLIENTES</a>
+            <a class="active" href="reservation-reservation.html"><i class="far fa-calendar-alt"></i> &nbsp;
+                RESERVACIONES</a>
         </li>
         <li>
-            <a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
+            <a href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; PRÉSTAMOS</a>
+        </li>
+        <li>
+            <a href="reservation-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; FINALIZADOS</a>
+        </li>
+        <li>
+            <a href="reservation-search.html"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR POR FECHA</a>
         </li>
     </ul>
 </div>
 
-<!-- Content here-->
 <div class="container-fluid">
     <div class="table-responsive">
         <table class="table table-dark table-sm">
             <thead>
                 <tr class="text-center roboto-medium">
                     <th>#</th>
-                    <th>DNI</th>
-                    <th>NOMBRE</th>
-                    <th>APELLIDO</th>
-                    <th>TELEFONO</th>
-                    <th>DIRECCIÓN</th>
+                    <th>CLIENTE</th>
+                    <th>FECHA DE PRÉSTAMO</th>
+                    <th>FECHA DE ENTREGA</th>
+                    <th>TIPO</th>
+                    <th>ESTADO</th>
+                    <th>FACTURA</th>
                     <th>ACTUALIZAR</th>
                     <th>ELIMINAR</th>
                 </tr>
@@ -43,18 +49,18 @@
             <tbody>
                 <tr class="text-center">
                     <td>1</td>
-                    <td>012342567</td>
-                    <td>NOMBRE DEL CLIENTE</td>
-                    <td>APELLIDO DEL CLIENTE</td>
-                    <td>72349874</td>
+                    <td>NOMBRE CLIENTE</td>
+                    <td>2017/10/8</td>
+                    <td>2017/10/10</td>
+                    <td><span class="badge badge-warning">Reservacion</span></td>
+                    <td><span class="badge badge-danger">Pendiente</span></td>
                     <td>
-                        <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover"
-                            title="Nombre del cliente" data-content="Direccion completa del cliente">
-                            <i class="fas fa-info-circle"></i>
-                        </button>
+                        <a href="#" class="btn btn-info">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
                     </td>
                     <td>
-                        <a href="client-update.html" class="btn btn-success">
+                        <a href="reservation-update.html" class="btn btn-success">
                             <i class="fas fa-sync-alt"></i>
                         </a>
                     </td>
@@ -68,18 +74,18 @@
                 </tr>
                 <tr class="text-center">
                     <td>2</td>
-                    <td>012342567</td>
-                    <td>NOMBRE DEL CLIENTE</td>
-                    <td>APELLIDO DEL CLIENTE</td>
-                    <td>72349874</td>
+                    <td>NOMBRE CLIENTE</td>
+                    <td>2017/10/8</td>
+                    <td>2017/10/10</td>
+                    <td><span class="badge badge-warning">Reservacion</span></td>
+                    <td><span class="badge badge-danger">Pendiente</span></td>
                     <td>
-                        <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover"
-                            title="Nombre del cliente" data-content="Direccion completa del cliente">
-                            <i class="fas fa-info-circle"></i>
-                        </button>
+                        <a href="#" class="btn btn-info">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
                     </td>
                     <td>
-                        <a href="client-update.html" class="btn btn-success">
+                        <a href="reservation-update.html" class="btn btn-success">
                             <i class="fas fa-sync-alt"></i>
                         </a>
                     </td>
@@ -93,18 +99,18 @@
                 </tr>
                 <tr class="text-center">
                     <td>3</td>
-                    <td>012342567</td>
-                    <td>NOMBRE DEL CLIENTE</td>
-                    <td>APELLIDO DEL CLIENTE</td>
-                    <td>72349874</td>
+                    <td>NOMBRE CLIENTE</td>
+                    <td>2017/10/8</td>
+                    <td>2017/10/10</td>
+                    <td><span class="badge badge-warning">Reservacion</span></td>
+                    <td><span class="badge badge-primary">Cancelado</span></td>
                     <td>
-                        <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover"
-                            title="Nombre del cliente" data-content="Direccion completa del cliente">
-                            <i class="fas fa-info-circle"></i>
-                        </button>
+                        <a href="#" class="btn btn-info">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
                     </td>
                     <td>
-                        <a href="client-update.html" class="btn btn-success">
+                        <a href="reservation-update.html" class="btn btn-success">
                             <i class="fas fa-sync-alt"></i>
                         </a>
                     </td>
@@ -118,18 +124,18 @@
                 </tr>
                 <tr class="text-center">
                     <td>4</td>
-                    <td>012342567</td>
-                    <td>NOMBRE DEL CLIENTE</td>
-                    <td>APELLIDO DEL CLIENTE</td>
-                    <td>72349874</td>
+                    <td>NOMBRE CLIENTE</td>
+                    <td>2017/10/8</td>
+                    <td>2017/10/10</td>
+                    <td><span class="badge badge-warning">Reservacion</span></td>
+                    <td><span class="badge badge-danger">Pendiente</span></td>
                     <td>
-                        <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover"
-                            title="Nombre del cliente" data-content="Direccion completa del cliente">
-                            <i class="fas fa-info-circle"></i>
-                        </button>
+                        <a href="#" class="btn btn-info">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
                     </td>
                     <td>
-                        <a href="client-update.html" class="btn btn-success">
+                        <a href="reservation-update.html" class="btn btn-success">
                             <i class="fas fa-sync-alt"></i>
                         </a>
                     </td>
