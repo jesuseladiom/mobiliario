@@ -50,7 +50,7 @@
                         </button>
                     </td>
                     <td>
-                        <a href="item-update.html" class="btn btn-success">
+                        <a href="<?php echo SERVER_URL; ?>item-update/" class="btn btn-success">
                             <i class="fas fa-sync-alt"></i>
                         </a>
                     </td>
@@ -74,7 +74,7 @@
                         </button>
                     </td>
                     <td>
-                        <a href="item-update.html" class="btn btn-success">
+                        <a href="<?php echo SERVER_URL; ?>item-update/" class="btn btn-success">
                             <i class="fas fa-sync-alt"></i>
                         </a>
                     </td>
@@ -98,7 +98,7 @@
                         </button>
                     </td>
                     <td>
-                        <a href="item-update.html" class="btn btn-success">
+                        <a href="<?php echo SERVER_URL; ?>item-update/" class="btn btn-success">
                             <i class="fas fa-sync-alt"></i>
                         </a>
                     </td>
@@ -122,7 +122,7 @@
                         </button>
                     </td>
                     <td>
-                        <a href="item-update.html" class="btn btn-success">
+                        <a href="<?php echo SERVER_URL; ?>item-update/" class="btn btn-success">
                             <i class="fas fa-sync-alt"></i>
                         </a>
                     </td>
