@@ -3,7 +3,7 @@
         <i class="fas fa-exchange-alt"></i>
     </a>
     <!-- configuracion usuario -->
-    <a href="user-update.html">
+    <a href="<?php echo SERVER_URL; ?>user-update/">
         <i class="fas fa-user-cog"></i>
     </a>
 
