@@ -85,21 +85,24 @@
             return $cadena;
         }
 
+        /* ------ funcion para verificar cadenas de acuerdo a su patron regulares ----- */
+        protected static function verificar_datos($filtro, $cadena){
+            // valida la expresion regular
+            if (preg_match("/^".$filtro."$/",$cadena)){
+                return false;
+            }else {
+                return true;
+            }
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        /* ------ funcion para verificar fechas ----- */
+        protected static function verificar_fecha($fecha){
+            $valores= explode("-", $fecha);
+            if (count($valores)==3 && checkdate($valores[1], $valores[2], $valores[0])){
+                return false;
+            }else {
+                return true;
+            }
         }
 
 
