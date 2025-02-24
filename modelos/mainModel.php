@@ -105,5 +105,62 @@
             }
         }
 
+        /* ------ funcion paginacion tablas ----- */
+        protected static function paginador_tablas($pagina, $Npaginas, $url, $botones){
+            $tabla= '    <nav aria-label="Page navigation example"><ul class="pagination justify-content-center">';
+            
+            // validar los botones de paginacion primero y anterior
+            if($pagina==1) {
+                // deshabilita pagina anterior porques es la primera
+                $tabla.= '<li class="page-item disabled">
+                <a class="page-link"><i class="fa-solid fa-angles-left"></i></a> </li>';
 
+            }else {
+                $tabla.= 
+                    '<li class="page-item"><a class="page-link" href="'.$url.'1/">
+                        <i class="fa-solid fa-angles-left"></i></a> </li>
+                    <li class="page-item"><a class="page-link" href="'.$url.($pagina-1).
+                        '/">Anterior</a> </li>
+                    ';
+            }
+
+            // parte central de la paginacion
+            $contador=0;
+            for($i=$pagina; $i<=$Npaginas;$i++){
+                // limite de botones que quiero por pagina
+                if ($contador>=$botones) {
+                    break;
+                }
+                if ($pagina==$i){
+                    // sombrear el boton que indica la pagina actual
+                    $tabla.='
+                        <li class="page-item"><a class="page-link active" href="'.$url.$i.'/">'.$i.'</a> </li>
+                    ';
+
+                }else {
+                    // se le quita la clase active para que no se vea sonbreado
+                    $tabla.='
+                        <li class="page-item"><a class="page-link" href="'.$url.$i.'/">'.$i.'</a> </li>
+                    ';
+                }
+            }
+
+            // validar los botones de paginacion ultimo y siguiente
+            if($pagina==$Npaginas) {
+                // deshabilita pagina anterior porques es la primera
+                $tabla.= '<li class="page-item disabled">
+                <a class="page-link"><i class="fa-solid fa-angles-right"></i></a> </li>';
+
+            }else {
+                $tabla.= 
+                    '<li class="page-item"><a class="page-link" href="'.$url.($pagina+1).'/">Siguiente</a> </li>
+                    <li class="page-item"><a class="page-link" href="'.$url.$Npaginas.'/"><i class="fa-solid fa-angles-right"></i></a> </li>
+                        
+                    ';
+            }
+
+
+            $tabla.='</ul></nav>';
+            return $tabla;
+        }
     }
